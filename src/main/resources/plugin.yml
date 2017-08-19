@@ -1,11 +1,11 @@
-name: AntiGhost
-main: io.github.rypofalem.antighost.AntiGhostPlugin
+name: GhostBuster
+main: io.github.rypofalem.ghostbuster.GhostBusterPlugin
 version: 0.1
 website: rypofalem.github.io
 author: RypoFalem
 description: Sends block updates to players after they try to break blocks
 commands:
-  agtest:
+  gbtest:
     description: Gives an operator haste 2 and an efficiency 5 diamond pick
     usage: /<command>
     default: OP

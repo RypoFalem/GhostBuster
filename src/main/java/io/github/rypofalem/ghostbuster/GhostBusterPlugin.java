@@ -1,6 +1,5 @@
-package io.github.rypofalem.antighost;
+package io.github.rypofalem.ghostbuster;
 
-import lombok.AllArgsConstructor;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -19,7 +18,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-public class AntiGhostPlugin extends JavaPlugin implements Listener, CommandExecutor {
+public class GhostBusterPlugin extends JavaPlugin implements Listener, CommandExecutor {
     boolean active = true;
 
     public void onEnable(){
