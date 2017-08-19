@@ -32,7 +32,7 @@ public class AntiGhostPlugin extends JavaPlugin implements Listener, CommandExec
         map = new HashMap<>();
     }
 
-    @EventHandler (priority = EventPriority.MONITOR)
+    @EventHandler (priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onBlockDamage(BlockDamageEvent event){
         if(!active) return;
         if(event.getPlayer().isOnGround()) return;
@@ -52,6 +52,7 @@ public class AntiGhostPlugin extends JavaPlugin implements Listener, CommandExec
 
         @Override
         public void run() {
+            map.remove(player);
             if(!player.isOnline()) return;
             player.sendBlockChange(block.getLocation(), block.getType(), block.getData());
         }
