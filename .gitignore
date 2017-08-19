@@ -1,0 +1,9 @@
+.idea/
+target/
+*.iml
+*.class
+*.zip
+*.tar
+*.jar
+*.rar
+*.gzip
