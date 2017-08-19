@@ -24,38 +24,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AntiGhostPlugin extends JavaPlugin implements Listener, CommandExecutor {
-    Map<Player, UpdateTask> map;
     boolean active = true;
 
     public void onEnable(){
         Bukkit.getPluginManager().registerEvents(this, this);
-        map = new HashMap<>();
     }
 
     @EventHandler (priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onBlockDamage(BlockDamageEvent event){
         if(!active) return;
         if(event.getPlayer().isOnGround()) return;
-        UpdateTask task = map.get(event.getPlayer());
-        try{
-            if(task != null) task.cancel();
-        } catch (IllegalStateException e){}
-        task = new UpdateTask(event.getPlayer(), event.getBlock());
-        task.runTaskLater(this, 2);
-        map.put(event.getPlayer(), new UpdateTask(event.getPlayer(), event.getBlock()));
-    }
-
-    @AllArgsConstructor
-    class UpdateTask extends BukkitRunnable {
-        Player player;
-        Block block;
-
-        @Override
-        public void run() {
-            map.remove(player);
-            if(!player.isOnline()) return;
-            player.sendBlockChange(block.getLocation(), block.getType(), block.getData());
-        }
+        if(event.getPlayer().isFlying()) return;
+        Block block = event.getBlock();
+        event.getPlayer().sendBlockChange(block.getLocation(), block.getType(), block.getData());
     }
 
     @Override
