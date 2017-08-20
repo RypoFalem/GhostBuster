@@ -7,6 +7,7 @@
   <version>1.0-SNAPSHOT</version>
   <name>ghostbuster</name>
   <url>http://maven.apache.org</url>
+
   <repositories>
     <repository>
       <id>spigot-repo</id>
@@ -15,11 +16,11 @@
   </repositories>
 
   <dependencies>
-    <!--Spigot API-->
+    <!--Bukkit API-->
     <dependency>
-      <groupId>org.spigotmc</groupId>
-      <artifactId>spigot-api</artifactId>
-      <version>1.12-R0.1-SNAPSHOT</version>
+      <groupId>org.bukkit</groupId>
+      <artifactId>bukkit</artifactId>
+      <version>1.12.1-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
@@ -43,4 +44,9 @@
       </plugin>
     </plugins>
   </build>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
 </project>

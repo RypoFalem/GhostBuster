@@ -6,6 +6,8 @@ author: RypoFalem
 description: Sends block updates to players after they try to break blocks
 commands:
   gbtest:
-    description: Gives an operator haste 2 and an efficiency 5 diamond pick
-    usage: /<command>
+    description:
+    usage: "This command is for testing purposes only!\n\n
+    /<command> - Give yourself haste 2, nightvision and an unbreakable efficiency 5 diamond pickaxe\n\n
+    /<command> toggle - Toggle ghost block protection active/disabled for all players"
     default: OP
