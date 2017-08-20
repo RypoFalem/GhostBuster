@@ -1,7 +1,7 @@
 name: GhostBuster
 main: io.github.rypofalem.ghostbuster.GhostBusterPlugin
 version: 0.1
-website: rypofalem.github.io
+website: https://github.com/RypoFalem
 author: RypoFalem
 description: Sends block updates to players after they try to break blocks
 commands:
