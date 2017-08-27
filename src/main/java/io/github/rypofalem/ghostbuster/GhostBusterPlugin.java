@@ -50,8 +50,8 @@ public class GhostBusterPlugin extends JavaPlugin implements Listener, CommandEx
     @EventHandler (priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onBlockDamage(BlockDamageEvent event){
         if(!active) return;
-        if(event.getPlayer().isOnGround()) return;
-        if(event.getPlayer().isFlying()) return;
+//        if(event.getPlayer().isOnGround()) return;
+//        if(event.getPlayer().isFlying()) return;
         Block block = event.getBlock();
         event.getPlayer().sendBlockChange(block.getLocation(), block.getType(), block.getData());
     }
