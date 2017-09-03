@@ -53,7 +53,7 @@ public class GhostBusterPlugin extends JavaPlugin implements Listener, CommandEx
 //        if(event.getPlayer().isOnGround()) return;
 //        if(event.getPlayer().isFlying()) return;
         Block block = event.getBlock();
-        event.getPlayer().sendBlockChange(block.getLocation(), block.getType(), block.getData());
+        Bukkit.getScheduler().runTaskLater(this, () -> event.getPlayer().sendBlockChange(block.getLocation(), block.getType(), block.getData()), 3);
     }
 
     @Override
