@@ -1,6 +1,7 @@
 name: GhostBuster
 main: io.github.rypofalem.ghostbuster.GhostBusterPlugin
 version: 1.0
+api-version: 1.13
 website: https://github.com/RypoFalem
 author: RypoFalem
 description: Prevents a common cause of "ghost blocks"
