@@ -1,4 +1,4 @@
-# The issue was fixed in vanilla 1.13. There's no reason to use or update this plugin paste 1.12.2
+# The issue was fixed in vanilla 1.13. There's no reason to use or update this plugin past 1.12.2
 
 # GhostBuster
 
